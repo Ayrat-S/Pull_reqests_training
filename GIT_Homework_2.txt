@@ -1,0 +1,101 @@
+GitHub. HW_2
+   
+   1. На локальном репозитории сделать ветки для:
+- Postman
+- Jmeter
+- CheckLists
+- Bug_Reports
+- SQL
+- Charles
+- Mobile_testing
+
+$ cd group_28
+$ git branch Postman
+$ git branch Jmeter
+$ git branch CheckLists
+$ git branch Bug_Reports
+$ git branch SQL
+$ git branch Charles
+$ git branch Mobile_testing
+
+
+   2. Запушить все ветки на внешний репозиторий
+$ git push -u origin Postman Jmeter CheckLists Bug_Reports SQL Charles Mobile_testing
+
+   3. В ветке Bug_Reports сделать текстовый документ со структурой баг репорта
+$ git checkout Bug_Reports
+
+$ cat > bug_report.txt
+ID:
+Короткое описание - Summary, Title:
+Проект - Project:
+Версия ПО - Version:
+Серьезность - Severity:
+Приоритет - Priority:
+Статус - Status:
+Автор - Author:
+Назначен на - Assigned To:
+Шаги воспроизведения - Steps to Reproduce:
+Фактический Результат - Result:
+Ожидаемый результат - Expected Result:
+Прикрепленный файл - Attachment:
+
+Enter
+Ctrl + D
+
+   4. Запушить структуру багрепорта на внешний репозиторий
+$ git add bug_report.txt
+$ git commit -m "add new file"
+$ git push
+
+   5. Вмержить ветку Bug_Reports в Main
+$ git checkout main
+$ git merge Bug_Reports
+
+   6. Запушить main на внешний репозиторий.
+$ git push -u origin main
+
+   7. В ветке CheckLists набросать структуру чек листа.
+$ git checkout CheckLists
+
+$ cat > cheklist.txt
+ОПЕРАЦИИ С ФАЙЛОМ
+Создание файла:
+Открытие файла:
+Сохранение файла:
+Печать файла:
+РЕДАКТИРОВАНИЕ ФАЙЛА
+Отмена:
+Копирование:
+Вырезание:
+Вставка:
+Удаление:
+Поиск:
+Поиск с заменой:
+Вставка даты:
+ФОРМАТИРОВАНИЕ
+Перенос строки:
+Изменение шрифта:
+
+Enter
+Ctrl + D
+
+   8. Запушить структуру на внешний репозиторий
+$ git add cheklist.txt
+$ git commit -m "add new file"
+$ git push
+
+  9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+Открываем страницу репозитория.
+Заходим во вкладку Pull requests
+Жмем Compare & pull request
+Смотрим на ветки, какой куда можно мержить на данный момент (Able to merge).
+Оставляем комментарий.
+Жмем Create pull request
+Жмем Merge pull request
+Жмем Confirm merge
+
+   10. Синхронизировать Внешнюю и Локальную ветки Main
+$ git checkout main
+$ git pull
+
